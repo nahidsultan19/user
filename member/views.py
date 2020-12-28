@@ -30,7 +30,7 @@ def MemberUpdate(request, pk):
     member = Member.objects.get(id=pk)
     form = MemberForm(instance=member)
     if request.method == 'POST':
-        form = MemberForm(request.POST, instance=form)
+        form = MemberForm(request.POST, instance=member)
         if form.is_valid():
             form.save()
         return redirect('member-list')
