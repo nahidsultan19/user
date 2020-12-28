@@ -35,4 +35,4 @@ def MemberUpdate(request, pk):
             form.save()
         return redirect('member-list')
     context = {'form': form}
-    return render(request, 'member-detail.html', context)
+    return render(request, 'member-update.html', context)
