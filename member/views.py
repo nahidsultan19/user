@@ -36,3 +36,11 @@ def MemberUpdate(request, pk):
         return redirect('member-list')
     context = {'form': form}
     return render(request, 'member-update.html', context)
+
+
+def MemberDelete(request, pk):
+    member = Member.objects.get(id=pk)
+    if request.method == 'POST':
+        member.delete()
+    context = {'member': member}
+    return render(request, 'member-delete.html', context)
