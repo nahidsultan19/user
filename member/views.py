@@ -39,8 +39,9 @@ def MemberUpdate(request, pk):
 
 
 def MemberDelete(request, pk):
-    member = Member.objects.get(id=pk)
+    member_delete = Member.objects.get(id=pk)
     if request.method == 'POST':
-        member.delete()
-    context = {'member': member}
+        member_delete.delete()
+        return redirect('member-list')
+    context = {'member_delete': member_delete}
     return render(request, 'member-delete.html', context)
