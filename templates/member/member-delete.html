@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<p>Are you sure, You want to delete "{member.name}"?</p>
+<p>Are you sure, You want to delete "{{member_delete}}"?</p>
 
 <form action="" method="POST">
     {% csrf_token %}
-    <button type="submit" class="btn btn-danger btn-block btn-sm">Yes, Confirm</button>
-    <a href="{% url 'member-list' %}">Cancel</a>
+    <button type="submit" class="btn btn-danger btn-sm">Yes, Confirm</button>
+    <a href="{% url 'member-list' %}" class="text-decoration-none">Cancel</a>
 </form>
 
 {% endblock %}
