@@ -50,6 +50,13 @@
                     <h4 class="display-4">Member Application</h4>
                     <p class="lead font-italic">Python Django Application</p>
                     <hr>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                    {% endfor%}
+                    {% endif %}
                     {% block content %}{% endblock %}
                 </div>
             </div>
