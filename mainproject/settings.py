@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # app
     'member.apps.MemberConfig',
+    'music.apps.MusicConfig',
     'phone_field',
     'crispy_forms',
 ]
