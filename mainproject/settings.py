@@ -62,7 +62,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates/member'),
-            os.path.join(BASE_DIR, 'template/emp')
+            os.path.join(BASE_DIR, 'templates/music')
         ],
         'APP_DIRS': True,
         'OPTIONS': {

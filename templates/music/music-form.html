@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1>Hello am from music app!</h1>
+<form action="">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6">
+            {{form.len|as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+            {{form.rating|as_crispy_field}}
+        </div>
+    </div>
+</form>
+
+{% endblock %}
