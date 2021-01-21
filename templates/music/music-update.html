@@ -1,7 +1,6 @@
 {% extends 'main.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<h1>Hello am from music app!</h1>
 <form action="" method="POST">
     {% csrf_token %}
     <div class="row">
@@ -29,10 +28,10 @@
     </div>
     <div class="row">
         <div class="col">
-            <button type="submit" class="btn btn-success btn-block">submit</button>
+            <button type="submit" class="btn btn-success btn-block">Update</button>
         </div>
         <div class="col">
-            <a href="{% url 'music-list' %}" class="btn btn-secondary btn-block">Go To List</a>
+            <a href="{% url 'music-list' %}" class="btn btn-secondary btn-block">Cancel</a>
         </div>
     </div>
 </form>

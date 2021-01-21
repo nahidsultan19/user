@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<p class="lead">Are you sure you want to delete "{{delete_track}}" </p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger btn-sm">Yes, Confirm</button>
+    <a href="{% url 'music-list'%}" class="text-decoration-none">Cancel</a>
+</form>
+
+{% endblock %}
