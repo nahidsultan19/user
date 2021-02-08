@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # app
-    'member.apps.MemberConfig',
     'music.apps.MusicConfig',
     'phone_field',
     'crispy_forms',
@@ -61,7 +60,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates/member'),
             os.path.join(BASE_DIR, 'templates/music')
         ],
         'APP_DIRS': True,
