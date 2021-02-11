@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # app
+    'blog.apps.BlogConfig',
     'music.apps.MusicConfig',
     'phone_field',
     'crispy_forms',
@@ -60,7 +61,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates/music')
+            os.path.join(BASE_DIR, 'templates/music'),
+            os.path.join(BASE_DIR, 'templates/blog')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
