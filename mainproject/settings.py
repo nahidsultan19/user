@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # app
     'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
     'music.apps.MusicConfig',
     'phone_field',
     'crispy_forms',
