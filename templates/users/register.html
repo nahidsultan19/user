@@ -2,19 +2,13 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<!-- <form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit" class="btn btn-success">submit</button>
-</form> -->
-
 <style>
     body,
     html {
         margin: 0;
         padding: 0;
         height: 100%;
-        background: #efefef im !important;
+        background: #efefef !important;
     }
 
     .user_card {
@@ -22,6 +16,7 @@
         margin-top: 10%;
         margin-bottom: 10%;
         background: #efefef;
+        position: relative;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -30,6 +25,7 @@
         -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 5px;
+
     }
 
     .form_container {
@@ -38,12 +34,14 @@
 
     #form-title {
         color: #000000;
+
     }
 
-    .login_btn {
+    /* .login_btn {
         width: 100%;
-        color: #ffffff !important;
-    }
+        background: #33ccff !important;
+        color: white !important;
+    } */
 
     .login_btn:focus {
         box-shadow: none !important;
@@ -56,9 +54,15 @@
 
     .input-group-text {
         background: #f7ba5b !important;
-        color: #ffffff !important;
+        color: white !important;
         border: 0 !important;
         border-radius: 0.25rem 0 0 0.25rem !important;
+    }
+
+    .input_user,
+    .input_pass:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
     }
 </style>
 
@@ -102,7 +106,7 @@
             </div>
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
-                    Already have an account? <a href="" class="ml-2">Login</a>
+                    Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
                 </div>
             </div>
         </div>

@@ -137,3 +137,9 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# for redirect loign
+LOGIN_REDIRECT_URL = 'blog-home'
+
+# for login required
+LOGIN_URL = 'login'
