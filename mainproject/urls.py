@@ -32,6 +32,7 @@ urlpatterns = [
     # for user register and profile
     path('register/', user_view.register, name='register'),
     path('profile/', user_view.profile, name='profile'),
+    path('profile-update/', user_view.profile_update, name='profile-update'),
 
     # class base view for login
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
@@ -39,5 +40,6 @@ urlpatterns = [
     path('music/', include('music.urls'))
 ]
 
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
