@@ -4,16 +4,16 @@
 <div class="row">
     {% for post in posts %}
     <div class="col-lg-4 col-md-6 mb-4 mt-2">
-        <div class="card">
-            <a href="single.html" class="thumbnail-link">
+        <div class="card post-card">
+            <a href="" class="thumbnail-link">
                 <img src="{{ post.img.url}}" alt="Image" class="img-fluid">
             </a>
             <div class="card-body">
                 <div class="mb-3 border-bottom">
                     {{ post.date_created|date:"F d, Y" }}
-                    <a href="#"> {{ post.author }}</a>
+                    <a href=""> {{ post.author }}</a>
                 </div>
-                <h2><a href="single.html">{{ post.title }}</a></h2>
+                <h2 style="font-size: 24px;"><a href="">{{ post.title }}</a></h2>
                 <p> {{ post.content }} </p>
             </div>
         </div>

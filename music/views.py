@@ -46,5 +46,5 @@ def MusicDelete(request, pk):
         delete_track.delete()
         messages.warning(request, f'Track Deleted!')
         return redirect('music-list')
-        context = {'delete_track': delete_track}
+    context = {'delete_track': delete_track}
     return render(request, 'music-delete.html', context)

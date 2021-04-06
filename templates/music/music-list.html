@@ -14,7 +14,8 @@
             <th>Lenth</th>
             <th>Rating</th>
             <th>
-                <a href="{% url 'music-index' %}" class="btn btn-outline-info"><i class="fa far fa-plus-square"></i>
+                <a href="{% url 'music-index' %}" class="btn btn-block btn-outline-info my-1"><i
+                        class="fa far fa-plus"></i>
                     Add</a>
             </th>
         </tr>
@@ -31,8 +32,11 @@
             <td>{{ track.len }}</td>
             <td>{{ track.rating }}</td>
             <td>
-                <a href="{% url 'music-update' track.id %}"><i class="fa far fa-edit fa-sm"></i>Edit</a>
-                <a href="{% url 'music-delete' track.id%}">delete</a>
+                <a href="{% url 'music-update' track.id %}" class="btn btn-outline-info  d-inline"><i
+                        class="fa far fa-edit fa-sm"></i> Update</a>
+                <a href="{% url 'music-delete' track.id%}" class="btn btn-outline-danger d-inline"><i
+                        class="fa fa-trash fa-sm"> Delete</i>
+                </a>
             </td>
         </tr>
         {% endfor %}
